@@ -81,7 +81,7 @@ body{
     list-style: none;
     border-bottom: 1.3px solid var(--primary-white);
     text-align: justify;
-    /* display: none; */
+    display: none;
     padding: 5px ;
 
 
@@ -93,7 +93,9 @@ body{
     display: block;
 
 }
-.nav:hover .nav-links li, .nav:focus-within .nav-links li,.Header_main:hover .nav-links li {
+.nav:hover .nav-links li, 
+.nav:focus-within .nav-links li
+{
     display: block;
 }
 .desktop-only{
