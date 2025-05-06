@@ -10,3 +10,5 @@ twitter: <i class="fa-brands fa-twitter"></i>
 left arrow:<i class="fa-solid fa-circle-arrow-left"></i> or <i class="fa-regular fa-circle-arrow-left"></i>
 right-arrow:<i class="fa-solid fa-circle-arrow-right"></i> or <i class="fa-regular fa-circle-arrow-right"></i>
 arrow-up:<i class="fa-solid fa-arrow-up"></i>
+
+
