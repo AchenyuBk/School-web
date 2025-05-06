@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 img{
-    display :block;   
+    display :block;  /*some code to make images display asblock instead of inline ...*/ 
 }
 input,button,textarea,label{
     font-family: inherit;
