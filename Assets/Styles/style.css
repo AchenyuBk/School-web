@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 :root {
-   --primary-white:hsl(0, 20%, 100%);
-   --primary-blue:hsl(201, 100%, 14%);
+    --primary-white: hsl(0, 20%, 100%);
+    --primary-blue: hsl(201, 100%, 14%);
+    --secondary-blue: hsla(203, 39%, 57%, 1);
+    --primary-black:hsl(0, 0%, 20%);
+    --primary-red:hsla(356, 83%, 41%, 1);
+    --secondary-white:hsla(40, 91%, 91%, 1);
 }
+
 *,
 *::before,
 *::after {
@@ -11,39 +18,91 @@
     padding: 0;
     box-sizing: border-box;
 }
-img{
-    display :block;  /*some code to make images display asblock instead of inline ...*/ 
+
+img {
+    display: block;
+    /*some code to make images display asblock instead of inline ...*/
 }
-input,button,textarea,label{
+
+input,
+button,
+textarea,
+label {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
 }
-html{
+
+
+html {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    max-width: 100vw;
+    width: 100vw;
     overflow-x: hidden;
     color: #fff;
     /* background-color: #666; */
 }
-body{
+
+body {
+    /* width:10vw; */
+    /* padding: 2em; */
+    overflow-x: hidden;
     font-size: 1.2em;
     background-color: var(--primary-white);
 }
-.Header_welcome_message{
+header{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--primary-white);
+    /* margin-bottom: 100px; */
+}
+
+.Header_welcome_message {
     background-color: hsla(201, 100%, 14%, 1);
-    height:100px;
+    height: 100px;
     font-size: 1.3em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
+    /* width:90vw; */
 }
-.Header_welcome_message a{
-    color:#fff
+.Header_welcome_message div i{
+    padding: 0 3px;
 }
-.Header_main{
+.Header_welcome_message div:hover{
+    border-bottom:2px solid var(--primary-white);
+    padding-bottom: 5px;
+    animation: line-up .2s ease 0s 1 normal forwards;
+}
+@keyframes line-up {
+    0%{
+    border-bottom: 1.3px groove var(--primary-white);
+        
+    }
+    50%{ 
+        border-bottom: 3px groove var(--primary-white);
+    }
+    100%{
+        border-bottom: 1.3px solid var(--primary-white);
+    }
+    
+}
+
+
+.Header_welcome_message a {
+    color: #fff;
+    text-decoration: none;
+    
+    
+}
+
+
+.Header_main {
     height: 100px;
     border: 2px solid #333;
     color: #333;
@@ -54,8 +113,31 @@ body{
     background-color: transparent;
     cursor: pointer;
 
+
 }
-.nav{
+
+.logo {
+    border: 2px solid transparent;
+    width: 100px;
+    height: 90px;
+    background-image: url('../images/IMG-20250506-WA0046.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* position: absolute; */
+    transform: translateY(-15%);
+}
+
+.logo img {
+    /* border: 2px solid red; */
+    height: 100px;
+    transform: translateY(-18%);
+
+
+}
+
+.nav {
     display: flex;
     position: relative;
     background-color: var(--primary-white);
@@ -66,7 +148,8 @@ body{
     /* padding-bottom: 60px; */
 
 }
-.nav-links{
+
+.nav-links {
     padding: 0;
     font-size: 1.2rem;
     background-color: var(--primary-blue);
@@ -76,28 +159,230 @@ body{
     right: 0px;
     /* width: 300px; */
     padding-left: 10px;
+
 }
-.nav-links li{
+
+.nav-links li {
     list-style: none;
     border-bottom: 1.3px solid var(--primary-white);
     text-align: justify;
     display: none;
-    padding: 5px ;
+    padding: 5px;
 
 
 }
-.nav-links li a{
+
+.nav:hover .nav-links {
+    animation: reveal 1s ease 0s 1 normal forwards;
+}
+
+.nav-links li a {
     color: var(--primary-white);
     text-decoration: none;
     text-align: left;
     display: block;
 
 }
-.nav:hover .nav-links li, 
-.nav:focus-within .nav-links li
-{
+
+.nav:hover .nav-links li,
+.nav:focus-within .nav-links li {
     display: block;
 }
-.desktop-only{
+
+.desktop-only {
     display: none;
+}
+
+/* .tel-only {} */
+
+/* marquee{ 
+    width: auto;
+    height: 500px;
+}
+marquee:hover{
+    animation-play-state: paused;
+} */
+ main{
+    padding-top: 10.4em;
+ }
+.photo-container{
+    /* width: 90vw; */
+    /*  */
+    height: 80vh;
+    background-color:var(--secondary-blue);
+    background-image: url('../images/IMG-20250506-WA0048.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: changePicture 40s ease 0s infinite normal forwards;
+}
+.intro{
+    /* width: 10vw; */
+    height: 80vh;
+    background-color: rgba(0, 156, 253, 0.582);
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.intro h1{
+    font-size: 1.1em;
+    padding: 0 10px;
+  
+}
+.intro-break{
+    height: 3px;
+    background-color: var(--primary-red);
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.moto{
+    /* font-family: "Lobster", sans-serif; */
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-black);
+    font-size: 1em;
+    text-shadow: 0px 0px 2px var(--primary-white);
+}
+.register-Or-Contact{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap :30px;
+    padding-top: 5em;
+    padding-right: 1em;
+}
+.register-Or-Contact a{
+    text-decoration: none;
+    color: var(--primary-white);
+}
+.register-Or-Contact button{
+    padding: 5px .6rem;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.register-Or-Contact button:active{
+    box-shadow:  inset 0px 0px 1px 2px var(--primary-black);
+}
+.registerNow{
+    background-color: var(--primary-red);
+}
+.contactUs{
+    background-color: var(--primary-blue);
+}
+.register-Or-Contact button.contactUs:active{
+    box-shadow:  inset 0px 0px 1px 2px var(--secondary-white);
+
+}
+.current{
+    color: var(--primary-red);
+    border-color: var(--primary-red);
+}
+.current a{
+    color: var(--primary-red) !important;
+}
+
+/* ##    ANIMATIONS  ##*/
+/* ============================ */
+@keyframes reveal {
+    0% {
+        top: 100px;
+    }
+
+    30% {
+        top: 200px;
+    }
+
+    100% {
+        top: 180px;
+    }
+
+
+}
+@keyframes changePicture {
+    0%{
+background-image: url('../images//IMG-20250506-WA0047.jpg');
+    }
+    10%{
+        background-image: url('../images//IMG-20250506-WA0047.jpg');
+    }
+    20%{
+        background-image: url('../images//IMG-20250506-WA0048.jpg');
+    }
+    30%{
+        background-image: url('../images/IMG-20250506-WA0074.jpg');
+    }
+    40%{
+        background-image: url('../images//IMG-20250506-WA0050.jpg');
+    }
+    50%{
+        background-image: url('../images//IMG-20250506-WA0051.jpg');
+    }
+    70%{
+        background-image: url('../images//IMG-20250506-WA0052.jpg');
+    }
+    80%{
+        background-image: url('../images//IMG-20250506-WA0053.jpg');
+    }
+    90%{
+        background-image: url('../images//IMG-20250506-WA0054.jpg');
+    }
+    100%{
+        background-image: url('../images//IMG-20250506-WA0055.jpg');
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .intro h1{
+        font-size: 2.1em;
+      
+    }
+    .moto{
+        font-size: 2em;
+        text-shadow: 0px 0px 2px var(--primary-white);
+    }
+
+    .desktop-only {
+        display: block;
+    }
+
+    .tel-only {
+        display: none;
+    }
+
+    .nav-links {
+        font-size: 1.4rem;
+        font-weight: 550;
+        color: #333;
+        background-color: inherit;
+        position: initial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-links li {
+        display: block;
+        transition: border-bottom .3s ease-in;
+    }
+
+    .nav-links li a {
+        color: #333;
+
+    }
+
+    .nav-links li:hover {
+        border-bottom: 2px solid;
+    }
 }
