@@ -13,6 +13,7 @@
 --papaya-whip: hsla(40, 91%, 91%, 1);
 --prussian-blue: hsla(201, 100%, 14%, 1);
 --air-superiority-blue: hsla(203, 39%, 57%, 1);
+--black : black
 
 /* SCSS HEX */
 $barn-red: #780000ff;
