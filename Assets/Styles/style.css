@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+/* ## ROOT STYLES ## */
+/* +++++++++++++++++++++++++++++ */
+
 :root {
     --primary-white: hsl(0, 20%, 100%);
     --primary-blue: hsl(201, 100%, 14%);
@@ -10,6 +13,9 @@
     --primary-red:hsla(356, 83%, 41%, 1);
     --secondary-white:hsla(40, 91%, 91%, 1);
 }
+
+/* ### RESET  */
+/* +=============================================+ */
 
 *,
 *::before,
@@ -24,6 +30,7 @@ img {
     /*some code to make images display asblock instead of inline ...*/
 }
 
+
 input,
 button,
 textarea,
@@ -34,13 +41,20 @@ label {
 }
 
 
+/* #### UTILITY SET */
+/* +++++++++++++++++++++++++++++++++++++++++++ */
+.desktop-only {
+    display: none;
+}
+
+
+/* ###### GENERAL ############ */
 html {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     width: 100vw;
     overflow-x: hidden;
     color: #fff;
-    /* background-color: #666; */
 }
 
 body {
@@ -58,7 +72,6 @@ header{
     right: 0;
     z-index: 1000;
     background-color: var(--primary-white);
-    /* margin-bottom: 100px; */
 }
 
 .Header_welcome_message {
@@ -69,7 +82,6 @@ header{
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
-    /* width:90vw; */
 }
 .Header_welcome_message div i{
     padding: 0 3px;
@@ -79,26 +91,11 @@ header{
     padding-bottom: 5px;
     animation: line-up .2s ease 0s 1 normal forwards;
 }
-@keyframes line-up {
-    0%{
-    border-bottom: 1.3px groove var(--primary-white);
-        
-    }
-    50%{ 
-        border-bottom: 3px groove var(--primary-white);
-    }
-    100%{
-        border-bottom: 1.3px solid var(--primary-white);
-    }
-    
-}
-
 
 .Header_welcome_message a {
     color: #fff;
     text-decoration: none;
-    
-    
+       
 }
 
 
@@ -189,19 +186,9 @@ header{
     display: block;
 }
 
-.desktop-only {
-    display: none;
-}
 
-/* .tel-only {} */
 
-/* marquee{ 
-    width: auto;
-    height: 500px;
-}
-marquee:hover{
-    animation-play-state: paused;
-} */
+
  main{
     padding-top: 10.4em;
  }
@@ -290,9 +277,29 @@ marquee:hover{
 .current a{
     color: var(--primary-red) !important;
 }
+.quick-links{
+    height: 25vh;
+    background-color: var(--primary-blue);
+}
+.quick-abt{
+    
+}
 
 /* ##    ANIMATIONS  ##*/
 /* ============================ */
+@keyframes line-up {
+    0%{
+    border-bottom: 1.3px groove var(--primary-white);
+        
+    }
+    50%{ 
+        border-bottom: 3px groove var(--primary-white);
+    }
+    100%{
+        border-bottom: 1.3px solid var(--primary-white);
+    }
+    
+}
 @keyframes reveal {
     0% {
         top: 100px;
@@ -341,7 +348,8 @@ background-image: url('../images//IMG-20250506-WA0047.jpg');
     }
 }
 
-
+/*  ### BREAK POINTS */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (min-width: 768px) {
     .intro h1{
         font-size: 2.1em;
