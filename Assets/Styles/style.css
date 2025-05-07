@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-   --primary-white:hsl(0, 20%, 100%);
-   --primary-blue:hsl(201, 100%, 14%);
+    --primary-white: hsl(0, 20%, 100%);
+    --primary-blue: hsl(201, 100%, 14%);
 }
+
 *,
 *::before,
 *::after {
@@ -11,15 +12,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-img{
-    display :block;  /*some code to make images display asblock instead of inline ...*/ 
+
+img {
+    display: block;
+    /*some code to make images display asblock instead of inline ...*/
 }
-input,button,textarea,label{
+
+input,
+button,
+textarea,
+label {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
 }
-html{
+
+html {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     max-width: 100vw;
@@ -27,23 +35,30 @@ html{
     color: #fff;
     /* background-color: #666; */
 }
-body{
+
+body {
     font-size: 1.2em;
     background-color: var(--primary-white);
 }
-.Header_welcome_message{
+header{
+    z-index: 1000;
+}
+
+.Header_welcome_message {
     background-color: hsla(201, 100%, 14%, 1);
-    height:100px;
+    height: 100px;
     font-size: 1.3em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
 }
-.Header_welcome_message a{
-    color:#fff
+
+.Header_welcome_message a {
+    color: #fff
 }
-.Header_main{
+
+.Header_main {
     height: 100px;
     border: 2px solid #333;
     color: #333;
@@ -54,8 +69,31 @@ body{
     background-color: transparent;
     cursor: pointer;
 
+
 }
-.nav{
+
+.logo {
+    border: 2px solid transparent;
+    width: 100px;
+    height: 90px;
+    background-image: url('../images/IMG-20250506-WA0046.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* position: absolute; */
+    transform: translateY(-15%);
+}
+
+.logo img {
+    /* border: 2px solid red; */
+    height: 100px;
+    transform: translateY(-18%);
+
+
+}
+
+.nav {
     display: flex;
     position: relative;
     background-color: var(--primary-white);
@@ -66,7 +104,8 @@ body{
     /* padding-bottom: 60px; */
 
 }
-.nav-links{
+
+.nav-links {
     padding: 0;
     font-size: 1.2rem;
     background-color: var(--primary-blue);
@@ -76,28 +115,104 @@ body{
     right: 0px;
     /* width: 300px; */
     padding-left: 10px;
+
 }
-.nav-links li{
+
+.nav-links li {
     list-style: none;
     border-bottom: 1.3px solid var(--primary-white);
     text-align: justify;
     display: none;
-    padding: 5px ;
+    padding: 5px;
 
 
 }
-.nav-links li a{
+
+.nav:hover .nav-links {
+    animation: reveal 1s ease 0s 1 normal forwards;
+}
+
+.nav-links li a {
     color: var(--primary-white);
     text-decoration: none;
     text-align: left;
     display: block;
 
 }
-.nav:hover .nav-links li, 
-.nav:focus-within .nav-links li
-{
+
+.nav:hover .nav-links li,
+.nav:focus-within .nav-links li {
     display: block;
 }
-.desktop-only{
+
+.desktop-only {
     display: none;
+}
+
+.tel-only {}
+
+marquee{
+    width: auto;
+    height: 500px;
+}
+marquee:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes reveal {
+    0% {
+        top: 100px;
+    }
+
+    30% {
+        top: 200px;
+    }
+
+    100% {
+        top: 180px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .desktop-only {
+        display: block;
+    }
+
+    .tel-only {
+        display: none;
+    }
+
+    .nav-links {
+        font-size: 1.4rem;
+        font-weight: 550;
+        color: #333;
+        background-color: inherit;
+        position: initial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-links li {
+        display: block;
+        transition: border-bottom .3s ease-in;
+    }
+
+    .nav-links li a {
+        color: #333;
+
+    }
+
+    .nav-links li:hover {
+        border-bottom: 2px solid;
+
+
+
+    }
 }
