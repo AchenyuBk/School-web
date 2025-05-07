@@ -282,6 +282,7 @@ header{
     background-color: var(--primary-blue);
 }
 .quick-abt{
+    width: 100vw;
     
 }
 
