@@ -48,7 +48,6 @@ label {
     display: none;
 }
 
-
 /* ###### GENERAL ############ */
 html {
     font-family: "Inter", sans-serif;
@@ -215,10 +214,12 @@ header{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    color: var(--primary-white);
 }
 .intro h1{
     font-size: 1.1em;
     padding: 0 10px;
+    width: 100vw;
   
 }
 .intro-break{
