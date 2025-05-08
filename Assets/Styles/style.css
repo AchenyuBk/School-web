@@ -12,6 +12,7 @@
     --primary-black:hsl(0, 0%, 20%);
     --primary-red:hsla(356, 83%, 41%, 1);
     --secondary-white:hsla(40, 91%, 91%, 1);
+    --secondary-red: hsla(356, 83%, 41%, 1);
 }
 
 /* ### RESET  */
@@ -55,6 +56,7 @@ html {
     width: 100vw;
     overflow-x: hidden;
     color: #fff;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -191,6 +193,7 @@ header{
 
  main{
     padding-top: 10.4em;
+    color: var(--primary-black);
  }
 .photo-container{
     /* width: 90vw; */
@@ -282,10 +285,138 @@ header{
     background-color: var(--primary-blue);
 }
 .quick-abt{
+    padding: 2em 1em;
     width: 100vw;
+    color: var(--primary-black);
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
     
 }
+.quick-abt h2{
+    /* max-width: 600px; */
+    text-align: center;
+    padding: 1.2em 0;
+}
+.quick-abt p{
+    /* max-width: 800px; */
+    padding: 0em .6em  0em .6em;
+    text-align: justify;
+    text-align: center;
+    text-justify: distribute;
+}
+.learn-more{
+    margin-top: 10px;
+    padding: .4rem 2rem;
+    background-color: var(--secondary-red);
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
 
+}
+.learn-more a{
+    text-decoration: none;
+    color: var(--primary-white);
+
+}
+.keyvalues-container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyv-alue{
+    width: 290px;
+    min-height: 200px;
+    border: 1.6px solid var(--primary-black);
+    margin: 16px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    background-color: hsl(0, 20%, 99%);
+
+}
+.keyvalues-container-h2{
+    text-align: center;
+    padding: 2rem;
+}
+.icon-container{
+    font-size: 4rem;
+}
+.admintion-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    padding-top: 3em;
+
+}
+.admition-info-contents{
+    min-width: 320px;
+    max-height:430px;
+    background-color: var(--secondary-red);
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 30px;
+    padding: 1.4em;
+    color: var(--primary-white);
+
+}
+.admition-info-contents .learn-more{
+    background-color: var(--primary-blue);
+    max-width: 200px;
+}
+.back-to-top{
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-red);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    right:10px ;
+    border-radius: 50%;
+    border: solid 2px var(--secondary-white);
+    box-shadow: 0px 0px 0px 2px 3px var(--secondary-white);
+}
+.back-to-top a{
+    color: var(--primary-white);
+}
+
+.footer-main{
+    width:100vw;
+    padding-left: 3em;
+    min-height:1000px ;
+    max-height: 1000px;
+    background-color: var(--primary-blue);
+    clear: both;
+    padding: 3em 0em;
+}
+
+.footerLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerLogo img{
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    /* mix-blend-mode:multiply; */
+    border-radius: 300px;
+}
 /* ##    ANIMATIONS  ##*/
 /* ============================ */
 @keyframes line-up {
@@ -351,7 +482,14 @@ background-image: url('../images//IMG-20250506-WA0047.jpg');
 
 /*  ### BREAK POINTS */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media screen and (min-width:500px){
+    .keyvalues-container{
+        flex-flow: row wrap;
+    }  
+}
 @media screen and (min-width: 768px) {
+
     .intro h1{
         font-size: 2.1em;
       
@@ -394,4 +532,8 @@ background-image: url('../images//IMG-20250506-WA0047.jpg');
     .nav-links li:hover {
         border-bottom: 2px solid;
     }
+    .quick-abt p{
+        padding: 0em 2em  1.3em 2em;
+    }
+
 }
