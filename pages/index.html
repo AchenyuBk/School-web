@@ -36,10 +36,10 @@
             <button class="nav">
                 <ul class="nav-links">
                     <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="../pages/about.html">About</a></li>
-                    <li><a href="../pages/academics.html">Academics</a></li>
-                    <li><a href="../pages/admissions.html">Admissions</a></li>
-                    <li><a href="../pages/contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="haburger-menu tel-only">
                     <i class="fa-solid fa-bars"></i>
@@ -148,6 +148,60 @@
         <div class="footerLogo">
             <img src="../Assets/images/logo-nobg.jpg" alt="" srcset="" width="300">
         </div>
+        <div class="socail-icons">
+            <a href="https://www.facebook.com/PHIBMAT" class="footer-link">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://vm.tiktok.com/ZMBo9WLeV/" class="footer-link">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="#" class="footer-link">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer-link">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="footer-link">
+                <i class="fa-brands fa-snapchat"></i>
+            </a>
+
+        </div>
+        <section class="footer-call-email">
+            <div class="footer-call">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+237674123456">+237 674 123 456</a><br>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+237674123456">+237 674 123 456</a><br>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+237674123456">+237 674 123 456</a>
+            </div>
+            <div class="footer-email">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:achenyubk@gmail.com">info@phibmat.com</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#" style=" text-decoration: none;">Bonaberi , Douala|Cameroon</a>
+            </div>
+
+        </section>
+        <section class="copyright">
+            <p>
+                <span>
+                    &copy; <span id="yearcontainer"></span>
+                    phibmat university 2025 |
+                    Group 3 Enterprises
+                 </span>
+            </p>
+            <script>
+                const date = new Date();
+                let year = date.getFullYear();
+                const yearcontainer = document.getElementById('yearcontainer');
+                yearcontainer.textContent = year;
+
+            </script>
+        </section>
+
     </footer>
 
 </body>
