@@ -1,1 +1,114 @@
 /* the about styles go here */
+.page-heading ,
+.pure-article,
+.colorSetter,
+.Our-values
+{
+    padding: 1.3em;
+    margin-bottom: 1em;
+}
+.page-heading h2{
+    padding: .3em 0em 1rem;
+}
+.undeline{
+    /* margin:2em 0em; */
+    width: 70%;
+    height: 3px;
+    background-color: var(--secondary-red);
+    margin: .6rem 0 1rem 0;
+}
+.page-heading button{
+    padding: 1rem;
+    /* margin: 1rem 0 1rem 0; */
+    background-color: var(--primary-red);
+    border-radius: 5px;
+    border:none;
+
+}
+.page-heading button:hover{
+    background-color: var(--primary-blue);
+    transition: all 1s ease;
+}
+.page-heading button a{
+    text-decoration: none;
+    color:var(--primary-white);
+}
+.pure-article{
+    text-align: justify;
+    padding-top: 0;
+}
+.graduation-background{
+    width: 100%;
+    min-height: 90vh;
+    background-image: url('../images/graduation.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.colorSetter{
+    width: 100%;
+    min-height: 90vh;
+    background-color: rgba(0, 156, 253, 0.582);
+}
+.pure-text{
+    text-align: justify;
+    color: var(--primary-white);
+}
+.article-goals{
+    color: var(--primary-red);
+    padding: 0rem 0 2em  0 ;
+
+}
+.article-goals i{
+    font-size: 4em;
+}
+.article-goals h3{
+    margin:  0rem 0 1rem  0 ;
+    font-size: 2em;
+
+}
+.Our-values{
+    width: 100vw;
+    min-height: 100vh;
+}
+/*  ### BREAK POINTS */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+@media screen and (min-width: 768px) {
+        .longtext-container,.colorSetter{
+        display: flex;
+        width: 100vw;
+        height: 50vh;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+    .colorSetter{
+        padding-top: 5em;
+        gap: 4em;
+        justify-content: center;
+        align-items: center;
+    }
+    .page-heading,
+    .longtext-container 
+    .article-container{
+        width: 50%;
+        height: 100%;
+        /* border: 3px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    /* .pure-text{
+        border: solid 3px red;
+    } */
+     .article-goals{
+        width: 50%;
+        height: 100%;
+     }
+
+
+
+    
+}
