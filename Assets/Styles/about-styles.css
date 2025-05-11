@@ -7,16 +7,16 @@
     padding: 1.3em;
     margin-bottom: 1em;
 }
-.page-heading h2{
-    padding: .3em 0em 1rem;
+/* .page-heading h2{
+    padding: .3em 0em 1rem 0rem;
 }
 .undeline{
-    /* margin:2em 0em; */
+
     width: 70%;
     height: 3px;
     background-color: var(--secondary-red);
     margin: .6rem 0 1rem 0;
-}
+} */
 .page-heading button{
     padding: 1rem;
     /* margin: 1rem 0 1rem 0; */
@@ -32,6 +32,20 @@
 .page-heading button a{
     text-decoration: none;
     color:var(--primary-white);
+}
+.fancylogo-container{
+    /* background-color: red; */
+    max-width: 100%;
+    height: 100%;
+    /* border: solid red 3px; */
+    /* background-image: url("../Assets/images/fancy-logo-nobg.png"); */
+
+}
+.fancylogo-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
 }
 .pure-article{
     text-align: justify;
@@ -70,29 +84,55 @@
 .Our-values{
     width: 100vw;
     min-height: 100vh;
+
 }
+    .longtext-container{
+        border: none;
+        
+    }
+    .meet-our-staff{
+        height: 60vh;
+        width: 100vw;
+    }
 /*  ### BREAK POINTS */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
+
 @media screen and (min-width: 768px) {
-        .longtext-container,.colorSetter{
+    .longtext-container{
+        /* border: solid 3px blue; */
+        max-height:90vh ;
+        display: flex;
+        overflow-y: hidden;
+
+   
+    }
+    .pure-article{
+        /* border: solid 3px red; */
+        display: flex;
+        flex-flow: row wrap;
+        padding-top: 2em;
+    }
+       .colorSetter{
         display: flex;
         width: 100vw;
-        height: 50vh;
-        padding-left: 5em;
-        padding-right: 5em;
+        max-height: 90vh;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 2em;
+         justify-content: center;
     }
     .colorSetter{
-        padding-top: 5em;
-        gap: 4em;
-        justify-content: center;
-        align-items: center;
+        padding-top: 2em;
+        padding: 4em;
+        gap: 2em;
+        align-items: flex-start;
     }
     .page-heading,
     .longtext-container 
     .article-container{
-        width: 50%;
+        width: 45%;
         height: 100%;
         /* border: 3px solid red; */
         display: flex;
