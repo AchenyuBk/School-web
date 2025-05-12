@@ -36,9 +36,9 @@
 
             <button class="nav">
                 <ul class="nav-links">
-                    <li ><a href="index.html">Home</a></li>
-                    <li ><a href="about.html">About</a></li>
-                    <li ><a href="academics.html">Academics</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
                     <li class="current"><a href="admissions.html">Admissions</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -53,9 +53,9 @@
         </section>
     </header>
     <main>
-        <section class="photo-container other-styles" id="photo-container" style="height:200px ;" >
+        <section class="photo-container other-styles" id="photo-container" style="height:200px ;">
             <div class="intro " style="height:200px ; text-align: left;">
-                <h1  id="top">Registration / Applications</h1>
+                <h1 id="top">Registration / Applications</h1>
             </div>
         </section>
         <section>
@@ -65,9 +65,91 @@
                 </a>
             </div>
         </section>
-<!-- THIS IS THE SPACE FOR THE ABOUT PAGE PLEASE DONT TOUCH THE HEADERS AND FOOTER -->
- REGISTRATION 
- <input type="file" name="birthcertificate" id="birthcertificate">
+        <!-- THIS IS THE SPACE FOR THE ABOUT PAGE PLEASE DONT TOUCH THE HEADERS AND FOOTER -->
+        REGISTRATION
+        <section class="form-container ">
+            <div class="herolike">
+                <form action="#" method="post">
+                    <div class="form-content">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="dob">Date of birth</label>
+                        <input type="date" name="dob" id="dob" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="email">email</label>
+                        <input type="email" name="email" id="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="Gender">Gender</label>
+                        <input type="radio" name="gender"  required>
+                        <input type="radio" name="gender"  required>
+                    </div>
+                    <div class="form-content">
+                        <label for="tel">Tel</label>
+                        <input type="tel" name="tel" id="tel" placeholder="+237 - 675 - 786 - 239" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option value="cameroon">Cameroon</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="ghana">Ghana</option>
+                            <option value="ivory-coast">Ivory Coast</option>
+                            <option value="south-africa">South Africa</option>
+                            <option value="usa">United States of America</option>
+                            <option value="uk">United Kingdom</option>
+                        </select>
+                    </div>
+                    <div class="form-content">
+                        <label for="major">Major/ Field</label>
+                        <select name="major" id="major">
+                            <option value="none">please select</option>
+
+                        </select>
+                    </div>
+                    <div class="form-content">
+                        <label for="level">Level>
+                        <select name="lelel" id="lelel">
+                            <option value="none">please select</option>
+
+                        </select>
+
+                    </div>
+                    <div class="form-content">
+                        <label for="advanced-level  ">Advance Level</label>
+                        <input type="file" name="advanced-level id="advanced-level placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-content">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    </div>
+
+                </form>
+            </div>
+
+
+
+        </section>
+        <input type="file" name="birthcertificate" id="birthcertificate">
     </main>
     <footer class="footer-main">
         <div class="footerLogo">
@@ -116,7 +198,7 @@
                     &copy; <span id="yearcontainer"></span>
                     phibmat university 2025 |
                     Group 3 Enterprises
-                 </span>
+                </span>
             </p>
             <script>
                 const date = new Date();

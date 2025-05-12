@@ -1,3 +1,56 @@
+.contents{
+    padding: 2em;
+}
+.contents p{
+text-align: justify;
+padding-bottom: 2em;
+}
+form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+input,textarea{
+    width: 300px;
+    padding: 5px 10px 5px 10px;
+    display: block;
+    border: 1.4px solid  ;
+    border-radius: 3px;
+    color: #999;
+
+}
+label{
+    display: block;
+    padding: 0 5px 0 5px;
+}
+form button{
+    display: inline;
+    width: 140px;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: var(--secondary-red);
+    border: none;
+    color: var(--primary-white);
+    cursor: pointer;
+}
+form div:last-of-type{
+    display: flex;
+    width: 300px;
+
+}
+form button:hover{
+    background-color: var(--primary-blue);
+    transition:all 1.3s ease;
+}
+textarea{
+    margin: 15px 0;
+    min-height: 200px;
+    max-width: 300PX;
+}
 iframe{
     width: 100vw;
     height: 40vh;
