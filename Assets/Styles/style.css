@@ -451,6 +451,18 @@ header{
     padding-top: 5em;
     text-align: center;
 }
+
+
+.page-heading h2{
+    padding: .3em 0em 1rem 0rem;
+}
+.undeline{
+    /* margin:2em 0em; */
+    width: 70%;
+    height: 3px;
+    background-color: var(--secondary-red);
+    margin: .6rem 0 1rem 0;
+}
 /* ========================== */
 /* ################################# */
 /* todo : fix this after */
