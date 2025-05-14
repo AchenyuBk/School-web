@@ -1,12 +1,61 @@
-.contents{
+
+.contents {
     padding: 2em;
 }
-.contents p{
-text-align: justify;
-padding-bottom: 2em;
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+
+
 }
-form{
+
+.information ,form{
     margin: 0 auto;
+    /* border: 1.3px solid red; */
+    box-shadow:  0 0 3px var(--primary-blue);
+    border-radius: 10px;
+    margin: 30px;
+
+}
+
+.icon-info {
+    font-size: 3em;
+    width: 30%;
+    /* border: 2px solid blue; */
+    text-align: center;
+    
+}
+.realinfo{
+    width: 100%;
+    display: flex;
+    /* border: 2px solid green; */
+}
+.realinfo-text{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3em;
+    padding: 0 clamp(0, 2.3vh, 1.4rem) 0 clamp(0, 2.3vh, 1.4rem) ;
+
+
+}
+.message{
+    padding:clamp(3px ,3vw , 10px)
+}
+.realinfo-text a{
+    text-decoration: none;
+    color:#777;
+}
+.contents p {
+    text-align: justify;
+    padding-bottom: 2em;
+}
+
+form {
+    margin: 0 auto;
+    padding-top: 2em;
     display: flex;
     flex-direction: column;
     flex-flow: column nowrap;
@@ -14,20 +63,23 @@ form{
 }
 
 
-input,textarea{
+input,
+textarea {
     width: 300px;
     padding: 5px 10px 5px 10px;
     display: block;
-    border: 1.4px solid  ;
+    border: 1.4px solid;
     border-radius: 3px;
     color: #999;
 
 }
-label{
+
+label {
     display: block;
     padding: 0 5px 0 5px;
 }
-form button{
+
+form button {
     display: inline;
     width: 140px;
     padding: 10px;
@@ -37,21 +89,44 @@ form button{
     color: var(--primary-white);
     cursor: pointer;
 }
-form div:last-of-type{
+
+form div:last-of-type {
     display: flex;
     width: 300px;
 
 }
-form button:hover{
+
+form button:hover {
     background-color: var(--primary-blue);
-    transition:all 1.3s ease;
+    transition: all 1.3s ease;
 }
-textarea{
+
+textarea {
     margin: 15px 0;
     min-height: 200px;
     max-width: 300PX;
 }
-iframe{
+
+iframe {
     width: 100vw;
     height: 40vh;
+}
+
+@media screen and (min-width: 768px) {
+
+    .contact-info-container {
+        flex-direction: row;
+    }
+        .information {
+        width: 50%;
+    }
+    form {
+    margin: none;
+    padding-top: none;
+    /* display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    justify-content: flex-start; */
+}
+
 }
