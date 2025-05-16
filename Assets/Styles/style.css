@@ -47,6 +47,9 @@ label {
 .desktop-only {
     display: none;
 }
+.text-center{
+    text-align: center;
+}
 
 /* ###### GENERAL ############ */
 html {
@@ -451,27 +454,36 @@ main {
 .footer-main {
     width: 100vw;
     padding-left: 3em;
-    min-height: 1000px;
-    max-height: 1000px;
+    /* min-height: 1000px;
+    max-height: 1000px; */
     background-color: var(--primary-blue);
     clear: both;
-    padding: 3em 0em;
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .footerLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url('/Assets/images/fancy-logo-nobg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90%;
+    min-height: 300px;
+    /* border: 2px solid; */
+    object-position: center;
+    background-position: center;
+    object-fit: cover;
 }
 
-.footerLogo img {
+/* .footerLogo img {
     background-color: red;
     width: 300px;
     height: 300px;
     object-fit: cover;
-    /* mix-blend-mode:multiply; */
+    mix-blend-mode:multiply;
     border-radius: 300px;
-}
+} */
 
 .socail-icons {
     display: flex;
@@ -479,13 +491,16 @@ main {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100px;
     /* background-color: yellow; */
 }
 
 .footer-link {
     color: var(--primary-white);
+}
+.footer-link:hover{
+    color: var(--primary-red);
 }
 
 .footer-link i {
@@ -495,8 +510,9 @@ main {
 .footer-call-email {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    line-height: 3rem;
+    align-items: flex-start;
+    line-height: 2rem;
+    gap:10px;
 }
 
 .footer-call-email a {
@@ -505,12 +521,22 @@ main {
 }
 
 .footer-call-email i {
-    padding-inline-end: 1rem;
+    /* padding-inline-end: 1rem; */
 }
 
 .copyright {
-    padding-top: 5em;
+    /* padding-top: 5em; */
     text-align: center;
+}
+.quicklinks{
+    width: 100%;
+    /* border: 2px solid ; */
+    text-align: left;
+    /* height: 100%; */
+}
+.quicklinks-ancor{
+    color: var(--primary-white);
+    
 }
 
 
@@ -525,6 +551,13 @@ main {
     background-color: var(--secondary-red);
     margin: .6rem 0 1rem 0;
 }
+.quicklinks ul {
+    list-style-type: none;
+    margin: 20px ;
+
+}
+
+
 
 /* ========================== */
 /* ################################# */
@@ -688,4 +721,28 @@ main {
     }
 
 
+
+}
+@media screen and (min-width:1024px) {
+    .footer-outro{
+        /* width: 30%; */
+    }
+        .footer-main{
+            display: grid;
+            grid-template-columns:  1fr 1fr 1fr ;
+            grid-template-rows:     1fr 1fr 1fr;
+            grid-auto-flow: row;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            max-height: 100vh;
+    }
+    .copyright {
+    padding-top: 0em;
+    text-align: center;
+
+}
+    ul li{
+        list-style-type: none;
+    }
 }

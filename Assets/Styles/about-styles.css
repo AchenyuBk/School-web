@@ -7,6 +7,10 @@
     padding: 1.3em;
     margin-bottom: 1em;
 }
+.about-page h3,.about-page .keyv-alue i{
+    color:var(--primary-red)
+
+}
 /* .page-heading h2{
     padding: .3em 0em 1rem 0rem;
 }
@@ -67,6 +71,8 @@
 .pure-text{
     text-align: justify;
     color: var(--primary-white);
+    /* background-color: hsla(0, 0%, 30%, 0.484); */
+    backdrop-filter: blur(20px);
 }
 .article-goals{
     color: var(--primary-red);

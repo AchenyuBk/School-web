@@ -1,5 +1,296 @@
 /* Registration styles */
-/* @import url('../Styles/contact-us-styles.css'); */
+@import url('../Styles/academics-styles.css');
+.page-heading{
+    padding: 0em;
+    font-size: 1.2em;
+}
+.welcome-welcome{
+    padding: 2em;
+}
+.welcome-welcome p{
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+    padding: 20px 0 20px 0;
+}
+.image img{
+    width: 100%;
+    border-radius: 6px;
+    box-shadow:  2px 3px 6px 2px black;
+}
+.photo-grid{
+    display: none;
+    /* width: 80vw; */
+    grid-template-areas: 
+    "--empty-texture1 --picture-long --picture-long --empty-texture2 --empty-texture2   --empty-texture2    --empty-texture2  --empty-texture2 --middle-sub     --middle-sub    --middle-sub    --middle-sub    --right-sub --right-sub --right-sub --right-sub --right-sub" 
+    "--empty-texture1 --picture-long --picture-long --picture-big    --picture-big      --picture-big       --picture-big      --picture-big   --middle-sub     --middle-sub    --middle-sub    --middle-sub    --right-sub --right-sub --right-sub --right-sub --right-sub"
+    "--empty-texture1 --picture-long --picture-long --picture-big    --picture-big      --picture-big       --picture-big      --picture-big   --middle-sub     --middle-sub    --middle-sub    --middle-sub    --right-sub --right-sub --right-sub --right-sub --right-sub"
+    "--empty-texture1 --picture-long --picture-long --picture-big    --picture-big      --picture-big       --picture-big      --picture-big   --middle-sub     --middle-sub    --middle-sub    --middle-sub    --right-sub --right-sub --right-sub --right-sub --right-sub"
+    "--empty-texture1 --picture-long --picture-long --picture-big    --picture-big      --picture-big       --picture-big      --picture-big   --middle-sub     --middle-sub    --middle-sub    --middle-sub    --right-sub --right-sub --right-sub --right-sub --right-sub"
+    
+    ;
+    grid-auto-columns: 5vw;
+    grid-auto-flow:row;
+    min-height: 70vh;
+    background-color: var(--primary-white);
+    box-shadow:  2px 2px 3px 2px;
+    margin: 20px 0 20px 0;
+
+    gap: 10px;
+}
+.grid-item:nth-child(1){
+    /* background-color: blue; */
+    grid-area: --empty-texture1;
+    background-image: url('/Assets/images/red-texture.jpg');
+    /* background-image: url('/Assets/images/IMG-20250506-WA0076.jpg'); */
+
+    background-size: cover;
+    /* background-position: center; */
+}
+.grid-item:nth-child(2){
+    grid-area: --picture-long;
+    background-image: url('/Assets/images/IMG-20250506-WA0076.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+.grid-item:nth-child(3){
+    background-color: blue;
+    grid-area: --picture-big;
+    background-image: url('/Assets/images/IMG-20250506-WA0057.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.grid-item:nth-child(4){
+    background-color: blue;
+    grid-area: --empty-texture2;
+    background-image: url('/Assets/images/african-texture.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.grid-item:nth-child(5){
+    grid-area: --middle-sub;
+    /* background-image: url('/Assets/images/IMG-20250506-WA0076.jpg'); */
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    /* grid-auto-columns: 50px; */
+    /* grid-auto-rows: 50px; */
+    grid-auto-flow: column;
+    grid-template-rows: 4fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 0.7vw;
+
+ 
+}
+.middle-Sub:nth-child(1){
+    height: 100%;
+    width: 100%;
+    background-image: url('/Assets/images/IMG-20250506-WA0074.jpg');
+    background-size: cover;
+    background-position: top;
+    object-fit: fill;
+
+}
+.middle-Sub:nth-child(2){
+    height: 100%;
+    width: 100%;
+    background-image: url('/Assets/images/blue-texture.jpg');
+    background-size: cover;
+    background-position: top;
+    object-fit: fill;
+
+}
+.grid-item:nth-child(6){
+    grid-area: --right-sub;
+    /* background-image: url('/Assets/images/IMG-20250506-WA0076.jpg'); */
+    background-size: cover;
+    background-position: center;
+    display: grid;
+
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 0.5vw;
+}
+
+
+.right-sub:nth-child(1){
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr ;
+     gap: 0.5vw;
+
+}
+.innerchildtop{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr ;
+    gap: 0.5vw;
+
+}
+
+.lastkids:nth-child(1){
+    background-image: url('/Assets/images/IMG-20250506-WA0062.jpg');
+    background-size: cover;
+    background-position: top;
+    object-fit: fill;
+    
+}
+.lastkids:nth-child(2){
+    background-image: url('/Assets/images/african-texture-2.jpg');
+    background-size: cover;
+    background-position: top;
+    object-fit: fill;
+    
+}
+.innerchildtop:nth-child(2){
+    background-image: url('/Assets/images/red-texture.jpg');
+    background-size: cover;
+    background-position: top;
+    object-fit: fill;
+
+}
+
+.right-sub:nth-child(2){
+    background-image: url('/Assets/images/IMG-20250506-WA0051.jpg');
+    background-size: cover;
+    background-position: top;
+    object-fit: fill;
+
+}
+.program-description{
+    min-height: 100vh;
+
+    background: hsl(55, 10%, 96%);
+    color: var(--primary-black);
+}
+.program-description-title{
+    padding: 1.3em 0 1.3em 0;
+}
+ol{
+    position: relative;
+}
+
+ol li{
+    /* list-style-position: inside; */
+/* padding: 1em; */
+list-style-type: none;
+}
+ ::marker{
+    font-weight: bold;
+
+}
+p a.learn-more{
+    color: white;
+    text-decoration: none;
+    margin: 1em 0 1em 0;
+    display: inline-block;
+    background-color: var(--primary-red);
+}
+ul{
+    padding: 1.2em 0 1.2em 0;
+}
+ul li i {
+    padding-inline-end: .3em;
+
+}
+h3 i{
+    /* border: solid var(--primary-red); */
+    padding: .3em;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    margin-right: .3em;
+    font-size: 1em;
+}
+li h3{
+    padding: .3em 0 .3em 0;
+    color: var(--primary-red);
+}
+
+.table-container1{
+    overflow-x: scroll;
+    width: 100%;
+    padding: 2em ;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    box-shadow: 2px 2px 3px 1px;
+    margin: 20px 0 20px 0;
+    /* border-radius: 2em; */
+}
+table{
+    min-height: 40vh;
+    /* padding: 2em; */
+    /* padding-left: 4em; */
+    margin-left: 2em;
+    
+}
+th{
+    padding: 5px;
+}
+tr.table-row-dates{
+    background-color: hsl(0, 89%, 22%);
+    color: white;
+}
+tr.table-row-dates td{
+    padding: .6em;
+}
+tr.note td{
+    border: solid black 1.3px;
+}
+
+.flexrow-container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.right-image,.images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-image{
+    display: none;
+    width: 40vw;
+    border-left: 2px solid black;
+    justify-content: space-evenly;
+}
+.images{
+    width: 100%;
+    width: 300px;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 3px 2px ;
+}
+.images:nth-child(1){
+    background-image: url('/Assets/images/IMG-20250506-WA0059.jpg');
+    transform: rotate(10deg);
+}
+.images:nth-child(2){
+    background-image: url('/Assets/images/IMG-20250506-WA0061.jpg');
+    transform: rotate(-10deg);
+}
+.images:nth-child(3){
+    background-image: url('/Assets/images/IMG-20250506-WA0064.jpg');
+    transform: rotate(10deg);
+}
+.images:nth-child(4){
+    background-image: url('/Assets/images/IMG-20250506-WA0072.jpg');
+    transform: rotate(-10deg);
+}
+
+
+
 .form-container{
     width: 100vw;
     min-height: 100vh;
@@ -17,4 +308,33 @@
 input[type="radio"]{
     width: 20px;
 
+}
+
+@media screen and (max-width: 768px){
+    .program-description{
+        width: 100vw;
+
+    }
+}
+@media screen and (min-width: 768px){
+    .table-container1{
+        justify-content: center;
+    }
+    .photo-grid{
+        display: grid;
+    }
+
+
+}
+@media screen and (min-width: 980px){
+    .right-image{
+        display: flex;
+        overflow: hidden;
+    }
+    .program-description{
+        max-width: 60vw;
+    }
+    .table-container1{
+        overflow: hidden;
+    }
 }
