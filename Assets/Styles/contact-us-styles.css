@@ -9,7 +9,9 @@ p {
 
 
 }
-
+.contents .page-heading{
+    padding: 2em;
+}
 
 .flex-row {
     display: flex;
