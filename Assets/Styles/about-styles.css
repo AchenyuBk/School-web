@@ -100,6 +100,92 @@
         height: 60vh;
         width: 100vw;
     }
+
+    .card-container{
+        /* max-width: 300PX; */
+        min-height: 50vh;
+        /* border: solid red; */
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: start;
+        row-gap: 10px;
+        margin: 0 auto;
+    }
+    /* .card-container .admin{
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        margin: 0 auto;
+    } */
+    .owner,.admin{
+        width: 300px;
+        height: 300px;
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        margin: 10px  auto;
+        align-items: center;
+    }
+    figure{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: red; */
+        
+    }
+    figure img,.dean-small-img{
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        margin: 0 0 5px 0;
+        object-fit: cover;
+        object-position: center;
+        background-size: cover;
+        
+
+        
+    }
+    .dean-small-img{
+        background-image: url('/Assets/images/english-dean.jpg');
+
+        /* background-position: top; */
+
+    }
+    .dean-small-img{
+        transform: scale(30px);
+    }
+    figcaption{
+        color: var(--primary-red);
+        font-weight: 700;
+    }
+    .name{
+        color: var(--primary-black);
+        font-weight: 600;
+    }
+    .owner{
+        /* border: solid red; */
+        margin-bottom: 100px;
+        position: relative;
+        border-right: none;
+    }
+    .owner::before{
+        position: absolute;
+        content: "'Its my objective to open doors to the Students in PHIBMAT in relation to proffessionalism and to great global Parnership for connection etc'";
+        height: 110px;
+        bottom: -110px;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        text-align: center;
+        color: #666;
+        /* border-right: solid 2px #666;
+        padding-right: 3px; */
+    }
 /*  ### BREAK POINTS */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -153,7 +239,34 @@
         width: 50%;
         height: 100%;
      }
-
+/* =================================================================== */
+         .card-container{
+        /* min-width: 700px; */
+        width: 98vw;
+        min-height: none;
+        /* border: solid red; */
+        display: flex;
+        flex-flow: row wrap;
+        /* grid-auto-flow: column;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px; */
+    }
+    /* .owner{
+        width: 500px;
+        height: auto;
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        margin: 10px  auto;
+        align-items: center;
+        border-right: 2px solid black;
+    } */
+     .owner{
+        border-right: solid 2px #666;
+     }
 
 
     

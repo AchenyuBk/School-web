@@ -1,11 +1,11 @@
-p {
+/* p {
     padding: 2em;
-}
+} */
 
 .contact-info-container {
     display: flex;
     flex-direction: column;
-    background-color: hsl(55, 10%, 96%);
+    background-color:var(--darker-white);
 
 
 }
@@ -165,23 +165,41 @@ iframe {
     height: 50vh;
 }
 
+
 @media screen and (min-width: 768px) {
     .contents{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+       
     }
+
 
     .contact-info-container {
         flex-direction: row;
-        width: 80vw;
+        width: 100vw;
         margin-bottom: 2em;
         box-shadow: 2px 2px 5px 3px black;
+        position: relative;
+    }
+    .contact-info-container::before{
+        content: "";
+        position: absolute;
+        /* background-color: blue; */
+        /* backdrop-filter: blur(10px); */
+        background-image: url('/Assets/images/red-phone-nobg.png');
+        background-size: cover;
+        background-position: center;
+        top:0;
+        left: 0;
+        bottom: 0;
+        width: 8em;
     }
 
     .information {
-        width: 100%;
+        padding-left: 5em;
+        /* width: 100%; */
     }
 
     form {
@@ -202,5 +220,11 @@ iframe {
 
 }
     
+
+}
+@media screen and (min-width: 1024px){
+        .contact-info-container {
+        width: 80vw;
+    }
 
 }

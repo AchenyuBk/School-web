@@ -13,6 +13,7 @@
     --primary-red: hsla(356, 83%, 41%, 1);
     --secondary-white: hsla(40, 91%, 91%, 1);
     --secondary-red: hsla(356, 83%, 41%, 1);
+    --darker-white: hsl(55, 10%, 90%);
 }
 
 /* ### RESET  */
@@ -47,7 +48,8 @@ label {
 .desktop-only {
     display: none;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
 
@@ -268,7 +270,7 @@ main {
 }
 
 .register-Or-Contact button {
-    padding: 5px .6rem;
+    padding: .8rem 1rem;
     border: none;
     border-radius: 7px;
     cursor: pointer;
@@ -348,7 +350,18 @@ main {
     color: var(--primary-white);
 
 }
-
+ .quick-abt .learn-more:hover,
+ .registerNow:hover,
+ .red-background:hover{
+    background-color: var(--primary-blue);
+    transition: all .2s ease;
+    border:2px solid var(--primary-red);
+ }
+ .contactUs:hover{
+    background-color: var(--primary-red);
+    transition: all .2s ease;
+     border: 2px solid var(--primary-blue);
+ }
 .keyvalues-container {
     display: flex;
     flex-flow: column nowrap;
@@ -422,6 +435,12 @@ main {
     background-color: var(--primary-blue);
     min-width: 200px;
 }
+.admition-info-contents .learn-more:hover{
+    background-color: var(--primary-red);
+    border: solid 2px var(--primary-blue);
+    transition: all .5s ease;
+
+}
 
 .admition-info-contents:nth-child(2) {
     background-color: var(--primary-blue)
@@ -430,6 +449,12 @@ main {
 .admition-info-contents:nth-child(2) .learn-more {
     background-color: var(--secondary-red);
 }
+.admition-info-contents:nth-child(2) .learn-more:hover{
+    background-color: var(--primary-blue);
+    border: solid 2px var(--primary-red);
+    transition: all .5s ease;
+}
+
 
 .back-to-top {
     width: 40px;
@@ -453,27 +478,46 @@ main {
 
 .footer-main {
     width: 100vw;
-    padding-left: 3em;
+    /* padding-left: 3em; */
     /* min-height: 1000px;
     max-height: 1000px; */
     background-color: var(--primary-blue);
     clear: both;
-    padding: 3em 2em;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    padding: 2em 2em 3em 2em;
+    display: grid;
+    grid-template-areas: 
+    "--footer-outro --footer-outro --footer-outro "
+    " --footer-logo --footer-logo  --footer-logo"
+    " --call-mail   --call-mail     --call-mail"
+    "--quick-links  --quick-links   --quick-links"
+    "--partners     --partners      --partners";
+
+    /* place-content: center; */
+    /* place-items: center; */
+    position: relative;
 }
+.footer-main * h4{
+    padding: 1.2rem  0;
+}
+    .footer-outro {
+        /* max-width: 450px; */
+        /* height: 300px; */
+        /* border: solid 2px red; */
+        grid-area: --footer-outro;
+    }
+
 
 .footerLogo {
     background-image: url('/Assets/images/fancy-logo-nobg.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 90%;
-    min-height: 300px;
+    height: 300px;
     /* border: 2px solid; */
     object-position: center;
     background-position: center;
     object-fit: cover;
+    grid-area: --footer-logo;
 }
 
 /* .footerLogo img {
@@ -499,7 +543,8 @@ main {
 .footer-link {
     color: var(--primary-white);
 }
-.footer-link:hover{
+
+.footer-link:hover {
     color: var(--primary-red);
 }
 
@@ -511,12 +556,15 @@ main {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
+    justify-content: flex-start;
     line-height: 2rem;
-    gap:10px;
+    gap: 10px;
+    grid-area: --call-mail;
 }
 
 .footer-call-email a {
     color: var(--primary-white);
+    display: inline-block;
 
 }
 
@@ -528,16 +576,42 @@ main {
     /* padding-top: 5em; */
     text-align: center;
 }
-.quicklinks{
+
+.links{
     width: 100%;
-    /* border: 2px solid ; */
-    text-align: left;
+    /* border: 2px solid red ; */
+    grid-area: --quick-links;
+    /* width: 300px; */
+    /* text-align: left; */
     /* height: 100%; */
 }
-.quicklinks-ancor{
-    color: var(--primary-white);
-    
+.partners{
+    /* border: solid red 3px; */
+    grid-area: --partners;
+    width: 100%;
+    margin-bottom: 30px;
 }
+.real-copyright{
+    /* border: solid red 3px; */
+    grid-area: --copyright;
+    margin-top: 2em;
+    /* margin-bottom: 2em; */
+    height: 10vh;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    background-color: hsl(213, 92%, 40%);
+    padding: 0;
+    display: grid;
+    place-content: center;
+}
+.quicklinks-ancor {
+    color: var(--primary-white);
+
+}
+
+
 
 
 .page-heading h2 {
@@ -551,20 +625,14 @@ main {
     background-color: var(--secondary-red);
     margin: .6rem 0 1rem 0;
 }
+
 .quicklinks ul {
     list-style-type: none;
-    margin: 20px ;
+    /* margin: 20px; */
+    margin-bottom: 10px;
 
 }
 
-
-
-/* ========================== */
-/* ################################# */
-/* todo : fix this after */
-* button {
-    /* padding: 1rem !important; */
-}
 
 /* ##    ANIMATIONS  ##*/
 /* ============================ */
@@ -715,34 +783,64 @@ main {
         display: flex;
         /* border: solid lime 4px; */
     }
+
     .register-Or-Contact button {
         padding: 1rem 2rem;
         font-size: 1.2em;
     }
 
+    .footer-main {
 
-
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 2vw;
+    padding: 2em 2em 4em 2em;
 }
-@media screen and (min-width:1024px) {
-    .footer-outro{
-        /* width: 30%; */
-    }
-        .footer-main{
-            display: grid;
-            grid-template-columns:  1fr 1fr 1fr ;
-            grid-template-rows:     1fr 1fr 1fr;
-            grid-auto-flow: row;
-            gap: 30px;
-            justify-content: center;
-            align-items: center;
-            max-height: 100vh;
-    }
-    .copyright {
-    padding-top: 0em;
+ .footer-main > * {
+    width: 28vw;
+    
+ }
+ .footer-call-email{
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* width: 100%; */
+ }
+ .footer-call{
+    text-align: left;
+ }
+ .real-copyright{
+    width: 100vw;
     text-align: center;
+    display: grid;
+    place-items: center;
+ }
+
+
 
 }
-    ul li{
+
+@media screen and (min-width:1024px) {
+
+
+    /* .footer-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-flow: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        max-height: 100vh;
+    } */
+
+    .copyright {
+        padding-top: 0em;
+        text-align: center;
+
+    }
+
+    ul li {
         list-style-type: none;
     }
 }

@@ -166,7 +166,7 @@
 .program-description{
     min-height: 100vh;
 
-    background: hsl(55, 10%, 96%);
+    background: var(--darker-white);
     color: var(--primary-black);
 }
 .program-description-title{
@@ -191,6 +191,12 @@ p a.learn-more{
     margin: 1em 0 1em 0;
     display: inline-block;
     background-color: var(--primary-red);
+}
+p a.learn-more:hover{
+    background-color: var(--primary-white);
+    border: 2px solid var(--primary-red);
+    color: var(--primary-black);
+    transition: all .4s ease;
 }
 ul{
     padding: 1.2em 0 1.2em 0;
