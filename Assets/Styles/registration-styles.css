@@ -45,7 +45,7 @@
 .grid-item:nth-child(1){
     /* background-color: blue; */
     grid-area: --empty-texture1;
-    background-image: url('/Assets/images/red-texture.jpg');
+    background-image: url('Assets/images/red-texture.jpg');
     /* background-image: url('/Assets/images/IMG-20250506-WA0076.jpg'); */
 
     background-size: cover;
@@ -53,7 +53,7 @@
 }
 .grid-item:nth-child(2){
     grid-area: --picture-long;
-    background-image: url('/Assets/images/IMG-20250506-WA0076.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0076.jpg');
     background-size: cover;
     background-position: center;
 
@@ -61,14 +61,14 @@
 .grid-item:nth-child(3){
     background-color: blue;
     grid-area: --picture-big;
-    background-image: url('/Assets/images/IMG-20250506-WA0057.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0057.jpg');
     background-size: cover;
     background-position: center;
 }
 .grid-item:nth-child(4){
     background-color: blue;
     grid-area: --empty-texture2;
-    background-image: url('/Assets/images/african-texture.jpg');
+    background-image: url('Assets/images/african-texture.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -90,7 +90,7 @@
 .middle-Sub:nth-child(1){
     height: 100%;
     width: 100%;
-    background-image: url('/Assets/images/IMG-20250506-WA0074.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0074.jpg');
     background-size: cover;
     background-position: top;
     object-fit: fill;
@@ -99,7 +99,7 @@
 .middle-Sub:nth-child(2){
     height: 100%;
     width: 100%;
-    background-image: url('/Assets/images/blue-texture.jpg');
+    background-image: url('Assets/images/blue-texture.jpg');
     background-size: cover;
     background-position: top;
     object-fit: fill;
@@ -135,21 +135,21 @@
 }
 
 .lastkids:nth-child(1){
-    background-image: url('/Assets/images/IMG-20250506-WA0062.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0062.jpg');
     background-size: cover;
     background-position: top;
     object-fit: fill;
     
 }
 .lastkids:nth-child(2){
-    background-image: url('/Assets/images/african-texture-2.jpg');
+    background-image: url('Assets/images/african-texture-2.jpg');
     background-size: cover;
     background-position: top;
     object-fit: fill;
     
 }
 .innerchildtop:nth-child(2){
-    background-image: url('/Assets/images/red-texture.jpg');
+    background-image: url('Assets/images/red-texture.jpg');
     background-size: cover;
     background-position: top;
     object-fit: fill;
@@ -157,7 +157,7 @@
 }
 
 .right-sub:nth-child(2){
-    background-image: url('/Assets/images/IMG-20250506-WA0051.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0051.jpg');
     background-size: cover;
     background-position: top;
     object-fit: fill;
@@ -279,19 +279,19 @@ tr.note td{
     box-shadow: 2px 2px 3px 2px ;
 }
 .images:nth-child(1){
-    background-image: url('/Assets/images/IMG-20250506-WA0059.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0059.jpg');
     transform: rotate(10deg);
 }
 .images:nth-child(2){
-    background-image: url('/Assets/images/IMG-20250506-WA0061.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0061.jpg');
     transform: rotate(-10deg);
 }
 .images:nth-child(3){
-    background-image: url('/Assets/images/IMG-20250506-WA0064.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0064.jpg');
     transform: rotate(10deg);
 }
 .images:nth-child(4){
-    background-image: url('/Assets/images/IMG-20250506-WA0072.jpg');
+    background-image: url('Assets/images/IMG-20250506-WA0072.jpg');
     transform: rotate(-10deg);
 }
 
