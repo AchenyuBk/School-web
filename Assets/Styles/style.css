@@ -508,7 +508,7 @@ main {
 
 
 .footerLogo {
-    background-image: url('/Assets/images/fancy-logo-nobg.png');
+    background-image: url('../images/fancy-logo-nobg.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 90%;
